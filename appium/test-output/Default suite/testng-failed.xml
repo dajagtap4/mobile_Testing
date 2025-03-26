@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="deepakjagtap.appium.AppiumBasics">
+      <class name="deepakjagtap.appium.TestCases">
         <methods>
+          <include name="longPress_Gesture"/>
           <include name="tearDown"/>
           <include name="tearDownServer"/>
-          <include name="VerifyUserCanDoWifiSettingAndEnterInput"/>
           <include name="ConfigureAppium"/>
         </methods>
-      </class> <!-- deepakjagtap.appium.AppiumBasics -->
+      </class> <!-- deepakjagtap.appium.TestCases -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
