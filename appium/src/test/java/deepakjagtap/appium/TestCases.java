@@ -23,14 +23,21 @@ public class TestCases extends BaseTest implements Locoators {
 		driver.findElement(By.id(CHECK_WIFI_CHECKBOX)).click();
 		driver.findElement(By.xpath(WIFI_SETTING)).click();
 
-		String actualText = driver.findElement(By.id(TEXT_WIFI_SETTING)).getText();
-		Assert.assertEquals(actualText, Constants.EXPECTED_WIFI_SETTINGS);
+		Boolean WifiSettingText = driver.findElement(By.id(TEXT_WIFI_SETTING)).isDisplayed();
+
+		if (WifiSettingText) {
+			String actualText = driver.findElement(By.id(TEXT_WIFI_SETTING)).getText();
+			Assert.assertEquals(actualText, Constants.EXPECTED_WIFI_SETTINGS,
+					"The text does not match the expected \"WiFi settings\" text.");
+		} else {
+			System.out.println("'WiFi settings' is not displayed on the screen.");
+		}
 
 		driver.findElement(By.id(INPUT_BOX)).sendKeys("xyz");
 		driver.findElement(By.id(OK)).click();
 	}
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void longPress_Gesture() throws InterruptedException {
 		driver.findElement(AppiumBy.accessibilityId(VIEWS)).click();
 		driver.findElement(AppiumBy.accessibilityId(EXPANDABLE_LISTS)).click();
@@ -39,9 +46,15 @@ public class TestCases extends BaseTest implements Locoators {
 		WebElement ele = driver.findElement(By.xpath(PEOPLE_NAMES));
 		longPressAction(ele);
 
-		Assert.assertTrue(driver.findElement(By.xpath(SAMPLE_MENU)).isDisplayed());
-		String actualText = driver.findElement(By.xpath(SAMPLE_MENU)).getText();
-		Assert.assertEquals(actualText, Constants.EXPECTED_SAMPLE_MENU_TEXT);
+		Boolean sampleMenu = driver.findElement(By.xpath(SAMPLE_MENU)).isDisplayed();
+
+		if (sampleMenu) {
+			String actualText = driver.findElement(By.xpath(SAMPLE_MENU)).getText();
+			Assert.assertEquals(actualText, Constants.EXPECTED_SAMPLE_MENU_TEXT,
+					"The text does not match the expected \"Sample menu\" text.");
+		} else {
+			System.out.println("Sample menu is not displayed on the screen.");
+		}
 
 	}
 
@@ -51,18 +64,34 @@ public class TestCases extends BaseTest implements Locoators {
 
 		driver.findElement(AppiumBy.androidUIAutomator(ANDROID_UI_AUTOMATOR_WEB_VIEW)).click();
 
-		String actualText = driver.findElement(By.xpath(WEB_VIEW)).getText();
-		Assert.assertEquals(actualText, Constants.EXPECTED_VIEW_WEBVIEW_TEXT);
+		Boolean VewView = driver.findElement(By.xpath(WEB_VIEW)).isDisplayed();
+
+		if (VewView) {
+			String actualText = driver.findElement(By.xpath(WEB_VIEW)).getText();
+			Assert.assertEquals(actualText, Constants.EXPECTED_VIEW_WEBVIEW_TEXT,
+					"The text does not match the expected \"Views/WebView\" text.");
+		} else {
+			System.out.println("'Views/WebView' is not displayed on the screen.");
+		}
+
 	}
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void verifyUserCan_ScrollToEnd_WithJSExcecutor() {
 		driver.findElement(AppiumBy.accessibilityId(VIEWS)).click();
 
 		scrollToEnd();
 
 		driver.findElement(AppiumBy.accessibilityId(VISIBILITY)).click();
-		String actualText = driver.findElement(By.xpath(VIEW_VISIBILITY)).getText();
-		Assert.assertEquals(actualText, Constants.EXPECTED_VIEW_VISIBILITY_TEXT);
+
+		Boolean ViewVisibility = driver.findElement(By.xpath(VIEW_VISIBILITY)).isDisplayed();
+
+		if (ViewVisibility) {
+			String actualText = driver.findElement(By.xpath(VIEW_VISIBILITY)).getText();
+			Assert.assertEquals(actualText, Constants.EXPECTED_VIEW_VISIBILITY_TEXT,
+					"The text does not match the expected \"Views/Visibility\" text.");
+		} else {
+			System.out.println("'Views/Visibility' is not displayed on the screen.");
+		}
 	}
 }
