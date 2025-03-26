@@ -1,65 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="4" total="5" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-26T16:19:17 IST" name="Default suite" finished-at="2025-03-26T16:20:47 IST" duration-ms="90480">
+  <suite started-at="2025-03-26T19:29:35 IST" name="Default suite" finished-at="2025-03-26T19:29:54 IST" duration-ms="18558">
     <groups>
     </groups>
-    <test started-at="2025-03-26T16:19:17 IST" name="Default test" finished-at="2025-03-26T16:20:47 IST" duration-ms="90480">
+    <test started-at="2025-03-26T19:29:35 IST" name="Default test" finished-at="2025-03-26T19:29:54 IST" duration-ms="18558">
       <class name="deepakjagtap.appium.TestCases">
-        <test-method is-config="true" signature="ConfigureAppium()[pri:0, instance:deepakjagtap.appium.TestCases@3c41ed1d]" started-at="2025-03-26T16:19:17 IST" name="ConfigureAppium" finished-at="2025-03-26T16:19:17 IST" duration-ms="112" status="PASS">
+        <test-method is-config="true" signature="ConfigureAppium()[pri:0, instance:deepakjagtap.appium.TestCases@6025e1b6]" started-at="2025-03-26T19:29:35 IST" name="ConfigureAppium" finished-at="2025-03-26T19:29:35 IST" duration-ms="162" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ConfigureAppium -->
-        <test-method is-config="true" signature="driverInstance()[pri:0, instance:deepakjagtap.appium.TestCases@3c41ed1d]" started-at="2025-03-26T16:19:17 IST" name="driverInstance" finished-at="2025-03-26T16:19:26 IST" duration-ms="9247" status="PASS">
+        <test-method is-config="true" signature="driverInstance()[pri:0, instance:deepakjagtap.appium.TestCases@6025e1b6]" started-at="2025-03-26T19:29:35 IST" name="driverInstance" finished-at="2025-03-26T19:29:45 IST" duration-ms="9575" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverInstance -->
-        <test-method signature="VerifyUserCanDoWifiSettingAndEnterInput()[pri:0, instance:deepakjagtap.appium.TestCases@3c41ed1d]" started-at="2025-03-26T16:19:26 IST" name="VerifyUserCanDoWifiSettingAndEnterInput" finished-at="2025-03-26T16:19:37 IST" duration-ms="10910" status="PASS">
+        <test-method signature="verifyUserCanSwipeImageSetToLeft()[pri:0, instance:deepakjagtap.appium.TestCases@6025e1b6]" started-at="2025-03-26T19:29:45 IST" name="verifyUserCanSwipeImageSetToLeft" finished-at="2025-03-26T19:29:53 IST" duration-ms="7646" status="FAIL">
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
+            <message>
+              <![CDATA[The element 'By.xpath: (//android.widget.ImageView)[1]' is not linked to the same object in DOM anymore
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.30.0', revision: '509c7f17cc*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [9b342d3b-e93b-4ebd-b225-7cb45c592ce2, executeScript {script=mobile:swipeGesture, args=[{elementId=00000000-0000-0614-ffff-ffff00000046, percent=0.75, direction=right}]}]
+Capabilities {appium:app: C://Users//deepak.jagtap//e..., appium:appActivity: io.appium.android.apis.ApiD..., appium:appPackage: io.appium.android.apis, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {app: C://Users//deepak.jagtap//e..., automationName: UIAutomator2, deviceName: Pixel 3a, platformName: ANDROID}, appium:deviceApiLevel: 36, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 440, appium:deviceScreenSize: 1080x2220, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.75, appium:platformVersion: 16, appium:statBarHeight: 66, appium:takesScreenshot: true, appium:viewportRect: {height: 2154, left: 0, top: 66, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 9b342d3b-e93b-4ebd-b225-7cb45c592ce2]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: The element 'By.xpath: (//android.widget.ImageView)[1]' is not linked to the same object in DOM anymore
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.30.0', revision: '509c7f17cc*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [9b342d3b-e93b-4ebd-b225-7cb45c592ce2, executeScript {script=mobile:swipeGesture, args=[{elementId=00000000-0000-0614-ffff-ffff00000046, percent=0.75, direction=right}]}]
+Capabilities {appium:app: C://Users//deepak.jagtap//e..., appium:appActivity: io.appium.android.apis.ApiD..., appium:appPackage: io.appium.android.apis, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {app: C://Users//deepak.jagtap//e..., automationName: UIAutomator2, deviceName: Pixel 3a, platformName: ANDROID}, appium:deviceApiLevel: 36, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 440, appium:deviceScreenSize: 1080x2220, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.75, appium:platformVersion: 16, appium:statBarHeight: 66, appium:takesScreenshot: true, appium:viewportRect: {height: 2154, left: 0, top: 66, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 9b342d3b-e93b-4ebd-b225-7cb45c592ce2
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:243)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:476)
+at deepakjagtap.appium.BaseTest.swipeRightAction(BaseTest.java:85)
+at deepakjagtap.appium.TestCases.verifyUserCanSwipeImageSetToLeft(TestCases.java:110)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifyUserCanDoWifiSettingAndEnterInput -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:deepakjagtap.appium.TestCases@3c41ed1d]" started-at="2025-03-26T16:19:37 IST" name="tearDown" finished-at="2025-03-26T16:19:38 IST" duration-ms="1454" status="PASS">
+        </test-method> <!-- verifyUserCanSwipeImageSetToLeft -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:deepakjagtap.appium.TestCases@6025e1b6]" started-at="2025-03-26T19:29:53 IST" name="tearDown" finished-at="2025-03-26T19:29:54 IST" duration-ms="1269" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="driverInstance()[pri:0, instance:deepakjagtap.appium.TestCases@3c41ed1d]" started-at="2025-03-26T16:19:38 IST" name="driverInstance" finished-at="2025-03-26T16:19:47 IST" duration-ms="8608" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- driverInstance -->
-        <test-method signature="longPress_Gesture()[pri:0, instance:deepakjagtap.appium.TestCases@3c41ed1d]" started-at="2025-03-26T16:19:47 IST" name="longPress_Gesture" finished-at="2025-03-26T16:19:58 IST" duration-ms="10581" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- longPress_Gesture -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:deepakjagtap.appium.TestCases@3c41ed1d]" started-at="2025-03-26T16:19:58 IST" name="tearDown" finished-at="2025-03-26T16:19:59 IST" duration-ms="1179" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="driverInstance()[pri:0, instance:deepakjagtap.appium.TestCases@3c41ed1d]" started-at="2025-03-26T16:19:59 IST" name="driverInstance" finished-at="2025-03-26T16:20:08 IST" duration-ms="9573" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- driverInstance -->
-        <test-method signature="verifyUserCan_ScrollToDesiredText_WithGooglePlugin()[pri:0, instance:deepakjagtap.appium.TestCases@3c41ed1d]" started-at="2025-03-26T16:20:08 IST" name="verifyUserCan_ScrollToDesiredText_WithGooglePlugin" finished-at="2025-03-26T16:20:21 IST" duration-ms="12228" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyUserCan_ScrollToDesiredText_WithGooglePlugin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:deepakjagtap.appium.TestCases@3c41ed1d]" started-at="2025-03-26T16:20:21 IST" name="tearDown" finished-at="2025-03-26T16:20:22 IST" duration-ms="1143" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="driverInstance()[pri:0, instance:deepakjagtap.appium.TestCases@3c41ed1d]" started-at="2025-03-26T16:20:22 IST" name="driverInstance" finished-at="2025-03-26T16:20:30 IST" duration-ms="8094" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- driverInstance -->
-        <test-method signature="verifyUserCan_ScrollToEnd_WithJSExcecutor()[pri:0, instance:deepakjagtap.appium.TestCases@3c41ed1d]" started-at="2025-03-26T16:20:30 IST" name="verifyUserCan_ScrollToEnd_WithJSExcecutor" finished-at="2025-03-26T16:20:46 IST" duration-ms="16297" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyUserCan_ScrollToEnd_WithJSExcecutor -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:deepakjagtap.appium.TestCases@3c41ed1d]" started-at="2025-03-26T16:20:46 IST" name="tearDown" finished-at="2025-03-26T16:20:47 IST" duration-ms="1115" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="tearDownServer()[pri:0, instance:deepakjagtap.appium.TestCases@3c41ed1d]" started-at="2025-03-26T16:20:47 IST" name="tearDownServer" finished-at="2025-03-26T16:20:47 IST" duration-ms="7" status="PASS">
+        <test-method is-config="true" signature="tearDownServer()[pri:0, instance:deepakjagtap.appium.TestCases@6025e1b6]" started-at="2025-03-26T19:29:54 IST" name="tearDownServer" finished-at="2025-03-26T19:29:54 IST" duration-ms="20" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownServer -->

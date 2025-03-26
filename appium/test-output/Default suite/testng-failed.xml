@@ -5,9 +5,10 @@
     <classes>
       <class name="deepakjagtap.appium.TestCases">
         <methods>
-          <include name="longPress_Gesture"/>
+          <include name="driverInstance"/>
           <include name="tearDown"/>
           <include name="tearDownServer"/>
+          <include name="verifyUserCanSwipeImageSetToLeft"/>
           <include name="ConfigureAppium"/>
         </methods>
       </class> <!-- deepakjagtap.appium.TestCases -->

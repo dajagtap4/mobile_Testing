@@ -13,6 +13,8 @@ public class Constants {
 	public static final String EXPECTED_SAMPLE_MENU_TEXT = "Sample menu";
 	public static final String EXPECTED_VIEW_WEBVIEW_TEXT = "Views/WebView";
 	public static final String EXPECTED_VIEW_VISIBILITY_TEXT = "Views/Visibility";
+	
+	public static final String FOUSABLE_ATTRIBUTE = "focusable";
 
 	public static final String SERVER_STARTED = "Appium Server Started: ";
 	public static final String SERVER_STOPPED = ">>>>>>>>>>  server Stopped  <<<<<<<<<<";

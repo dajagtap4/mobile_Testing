@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Appium Suite]">
-  <test thread-count="5" name="Smoke Tests(failed)">
-    <groups>
-      <run>
-        <include name="smoke"/>
-      </run>
-    </groups>
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
       <class name="deepakjagtap.appium.TestCases">
         <methods>
-          <include name="VerifyUserCanDoWifiSettingAndEnterInput"/>
-          <include name="verifyUserCan_ScrollToDesiredText_WithGooglePlugin"/>
+          <include name="driverInstance"/>
+          <include name="tearDown"/>
+          <include name="tearDownServer"/>
+          <include name="verifyUserCanSwipeImageSetToLeft"/>
+          <include name="ConfigureAppium"/>
         </methods>
       </class> <!-- deepakjagtap.appium.TestCases -->
     </classes>
-  </test> <!-- Smoke Tests(failed) -->
-</suite> <!-- Failed suite [Appium Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

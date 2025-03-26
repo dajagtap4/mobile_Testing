@@ -73,6 +73,13 @@ public class BaseTest {
 		((JavascriptExecutor) driver).executeScript("mobile:longClickGesture",
 				ImmutableBiMap.of("elementId", ((RemoteWebElement) ele).getId(), "duration", 2000));
 	}
+	
+	public void swipeLeftAction(WebElement ele) {
+		((JavascriptExecutor) driver).executeScript("mobile:swipeGesture", ImmutableMap.of("elementId",
+				((RemoteWebElement) ele).getId(), "direction", "left", "percent", 0.75
+
+		));
+	}
 
 	public void scrollToEnd() {
 		boolean canScrollMore;

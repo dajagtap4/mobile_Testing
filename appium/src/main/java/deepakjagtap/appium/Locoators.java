@@ -4,6 +4,11 @@ public interface Locoators {
 	public static final String VIEWS = "Views";
 	public static final String PREFERENCE = "Preference";
 	public static final String VISIBILITY = "Visibility";
+	
+	public static final String GALLERY = "Gallery";
+	public static final String PHOTOS = "1. Photos";
+	public static final String FIRST_IMAGE = "(//android.widget.ImageView)[1]";
+	
 	public static final String PREFERENCE_DEPENDENCIES = "3. Preference dependencies";
 	public static final String CHECK_WIFI_CHECKBOX = "android:id/checkbox";
 	public static final String WIFI_SETTING = "//android.widget.TextView[@resource-id=\"android:id/title\" and @text=\"WiFi settings\"]";

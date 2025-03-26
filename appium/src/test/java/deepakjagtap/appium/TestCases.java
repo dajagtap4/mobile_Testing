@@ -94,4 +94,21 @@ public class TestCases extends BaseTest implements Locoators {
 			System.out.println("'Views/Visibility' is not displayed on the screen.");
 		}
 	}
+	
+	@Test
+	public void verifyUserCanSwipeImageSetToLeft() {
+		driver.findElement(AppiumBy.accessibilityId(VIEWS)).click();
+		driver.findElement(AppiumBy.accessibilityId(GALLERY)).click();
+		driver.findElement(AppiumBy.accessibilityId(PHOTOS)).click();
+		
+		WebElement firstImage = driver.findElement(By.xpath(FIRST_IMAGE));
+		
+		Assert.assertEquals(firstImage.getAttribute(Constants.FOUSABLE_ATTRIBUTE),
+				"true");
+
+		swipeLeftAction(firstImage);
+
+		Assert.assertEquals(firstImage.getAttribute(Constants.FOUSABLE_ATTRIBUTE),
+				"false");
+	}
 }
