@@ -34,10 +34,6 @@ install this for windows
 C:\Users\deepak.jagtap\AppData\Local\Android\Sdk\platform-tools>adb install C:\Users\deepak.jagtap\Downloads\General-Store.apk
 Performing Streamed Install
 Success
-
-((JavascriptExecutor) driver).executeScript("mobile:startActivity", ImmutableMap.of("intent",
-				"io.appium.android.apis/io.appium.android.apis.preference.PreferenceDependencies"));
-
 ```
 
 ### Command to get package and activity 
@@ -45,4 +41,8 @@ Success
 ```
 C:\Users\deepak.jagtap>adb shell dumpsys window | find "mCurrentFocus"
   mCurrentFocus=Window{ca580ec u0 io.appium.android.apis/io.appium.android.apis.preference.PreferenceDependencies}
+
+
+((JavascriptExecutor) driver).executeScript("mobile:startActivity", ImmutableMap.of("intent",
+				"io.appium.android.apis/io.appium.android.apis.preference.PreferenceDependencies"));
 ```
