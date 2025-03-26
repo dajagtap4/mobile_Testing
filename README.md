@@ -34,6 +34,10 @@ install this for windows
 C:\Users\deepak.jagtap\AppData\Local\Android\Sdk\platform-tools>adb install C:\Users\deepak.jagtap\Downloads\General-Store.apk
 Performing Streamed Install
 Success
+
+((JavascriptExecutor) driver).executeScript("mobile:startActivity", ImmutableMap.of("intent",
+				"io.appium.android.apis/io.appium.android.apis.preference.PreferenceDependencies"));
+
 ```
 
 ### Command to get package and activity 
