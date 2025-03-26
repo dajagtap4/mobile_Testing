@@ -10,11 +10,13 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.google.common.collect.ImmutableBiMap;
+import com.google.common.collect.ImmutableMap;
 
 import io.appium.java_client.AppiumBy;
 
 public class TestCases extends BaseTest implements Locoators {
-	@Test
+
+	@Test(enabled = true)
 	public void VerifyUserCanDoWifiSettingAndEnterInput() throws MalformedURLException, URISyntaxException {
 		driver.findElement(AppiumBy.accessibilityId(PREFERENCE)).click();
 		driver.findElement(AppiumBy.accessibilityId(PREFERENCE_DEPENDENCIES)).click();
@@ -28,15 +30,39 @@ public class TestCases extends BaseTest implements Locoators {
 		driver.findElement(By.id(OK)).click();
 	}
 
-	@Test
+	@Test(enabled = false)
 	public void longPress_Gesture() throws InterruptedException {
-		driver.findElement(AppiumBy.accessibilityId("Views")).click();
-		driver.findElement(AppiumBy.accessibilityId("Expandable Lists")).click();
-		driver.findElement(AppiumBy.accessibilityId("1. Custom Adapter")).click();
+		driver.findElement(AppiumBy.accessibilityId(VIEWS)).click();
+		driver.findElement(AppiumBy.accessibilityId(EXPANDABLE_LISTS)).click();
+		driver.findElement(AppiumBy.accessibilityId(CUSTOM_ADAPTER)).click();
 
-		WebElement ele = driver.findElement(By.xpath("//android.widget.TextView[@text='People Names']"));
+		WebElement ele = driver.findElement(By.xpath(PEOPLE_NAMES));
+		longPressAction(ele);
 
-		((JavascriptExecutor) driver).executeScript("mobile:longClickGesture",
-				ImmutableBiMap.of("elementId", ((RemoteWebElement) ele).getId(), "duration", 2000));
+		Assert.assertTrue(driver.findElement(By.xpath(SAMPLE_MENU)).isDisplayed());
+		String actualText = driver.findElement(By.xpath(SAMPLE_MENU)).getText();
+		Assert.assertEquals(actualText, Constants.EXPECTED_SAMPLE_MENU_TEXT);
+
+	}
+
+	@Test(enabled = true)
+	public void verifyUserCan_ScrollToDesiredText_WithGooglePlugin() {
+		driver.findElement(AppiumBy.accessibilityId(VIEWS)).click();
+
+		driver.findElement(AppiumBy.androidUIAutomator(ANDROID_UI_AUTOMATOR_WEB_VIEW)).click();
+
+		String actualText = driver.findElement(By.xpath(WEB_VIEW)).getText();
+		Assert.assertEquals(actualText, Constants.EXPECTED_VIEW_WEBVIEW_TEXT);
+	}
+
+	@Test(enabled = false)
+	public void verifyUserCan_ScrollToEnd_WithJSExcecutor() {
+		driver.findElement(AppiumBy.accessibilityId(VIEWS)).click();
+
+		scrollToEnd();
+
+		driver.findElement(AppiumBy.accessibilityId(VISIBILITY)).click();
+		String actualText = driver.findElement(By.xpath(VIEW_VISIBILITY)).getText();
+		Assert.assertEquals(actualText, Constants.EXPECTED_VIEW_VISIBILITY_TEXT);
 	}
 }
