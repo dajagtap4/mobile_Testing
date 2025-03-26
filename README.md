@@ -26,3 +26,12 @@ https://github.com/appium/appium-inspector/releases
 install this for windows
 
 `Appium-Inspector-2025.3.1-win-x64.exe`
+
+
+### install .apk app in semulator/emulator through cmd
+
+```
+C:\Users\deepak.jagtap\AppData\Local\Android\Sdk\platform-tools>adb install C:\Users\deepak.jagtap\Downloads\General-Store.apk
+Performing Streamed Install
+Success
+```
