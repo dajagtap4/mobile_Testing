@@ -35,3 +35,10 @@ C:\Users\deepak.jagtap\AppData\Local\Android\Sdk\platform-tools>adb install C:\U
 Performing Streamed Install
 Success
 ```
+
+### Command to get package and activity 
+
+```
+C:\Users\deepak.jagtap>adb shell dumpsys window | find "mCurrentFocus"
+  mCurrentFocus=Window{ca580ec u0 io.appium.android.apis/io.appium.android.apis.preference.PreferenceDependencies}
+```
