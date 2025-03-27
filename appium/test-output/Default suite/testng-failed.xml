@@ -6,7 +6,7 @@
       <class name="deepakjagtap.appium.eCommerce_TestCases">
         <methods>
           <include name="driverInstance"/>
-          <include name="verifyUserCanAddProductInCart_TC_003"/>
+          <include name="verifyUserCanAddMultipleItemsInCartAndCheckTotalOfAllCartItemsPriceAndMakeOrder_TC_005"/>
           <include name="tearDown"/>
           <include name="tearDownServer"/>
           <include name="ConfigureAppium"/>

@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
+<testng-results ignored="4" total="5" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-27T12:47:57 IST" name="Default suite" finished-at="2025-03-27T12:48:23 IST" duration-ms="26797">
+  <suite started-at="2025-03-27T16:29:12 IST" name="Default suite" finished-at="2025-03-27T16:29:49 IST" duration-ms="36893">
     <groups>
     </groups>
-    <test started-at="2025-03-27T12:47:57 IST" name="Default test" finished-at="2025-03-27T12:48:23 IST" duration-ms="26797">
+    <test started-at="2025-03-27T16:29:12 IST" name="Default test" finished-at="2025-03-27T16:29:49 IST" duration-ms="36893">
       <class name="deepakjagtap.appium.eCommerce_TestCases">
-        <test-method is-config="true" signature="ConfigureAppium()[pri:0, instance:deepakjagtap.appium.eCommerce_TestCases@6a6cb05c]" started-at="2025-03-27T12:47:56 IST" name="ConfigureAppium" finished-at="2025-03-27T12:47:57 IST" duration-ms="102" status="PASS">
+        <test-method is-config="true" signature="ConfigureAppium()[pri:0, instance:deepakjagtap.appium.eCommerce_TestCases@2d1ef81a]" started-at="2025-03-27T16:29:12 IST" name="ConfigureAppium" finished-at="2025-03-27T16:29:12 IST" duration-ms="131" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ConfigureAppium -->
-        <test-method is-config="true" signature="driverInstance()[pri:0, instance:deepakjagtap.appium.eCommerce_TestCases@6a6cb05c]" started-at="2025-03-27T12:47:57 IST" name="driverInstance" finished-at="2025-03-27T12:48:07 IST" duration-ms="10084" status="PASS">
+        <test-method is-config="true" signature="driverInstance()[pri:0, instance:deepakjagtap.appium.eCommerce_TestCases@2d1ef81a]" started-at="2025-03-27T16:29:13 IST" name="driverInstance" finished-at="2025-03-27T16:29:25 IST" duration-ms="12803" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverInstance -->
-        <test-method signature="verifyUserCanAddProductInCart_TC_003()[pri:0, instance:deepakjagtap.appium.eCommerce_TestCases@6a6cb05c]" started-at="2025-03-27T12:48:07 IST" name="verifyUserCanAddProductInCart_TC_003" finished-at="2025-03-27T12:48:22 IST" duration-ms="15565" status="PASS">
+        <test-method signature="verifyUserCanAddMultipleItemsInCartAndCheckTotalOfAllCartItemsPriceAndMakeOrder_TC_005()[pri:0, instance:deepakjagtap.appium.eCommerce_TestCases@2d1ef81a]" started-at="2025-03-27T16:29:25 IST" name="verifyUserCanAddMultipleItemsInCartAndCheckTotalOfAllCartItemsPriceAndMakeOrder_TC_005" finished-at="2025-03-27T16:29:47 IST" duration-ms="21523" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyUserCanAddProductInCart_TC_003 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:deepakjagtap.appium.eCommerce_TestCases@6a6cb05c]" started-at="2025-03-27T12:48:22 IST" name="tearDown" finished-at="2025-03-27T12:48:23 IST" duration-ms="1119" status="PASS">
+        </test-method> <!-- verifyUserCanAddMultipleItemsInCartAndCheckTotalOfAllCartItemsPriceAndMakeOrder_TC_005 -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:deepakjagtap.appium.eCommerce_TestCases@2d1ef81a]" started-at="2025-03-27T16:29:47 IST" name="tearDown" finished-at="2025-03-27T16:29:49 IST" duration-ms="2517" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="tearDownServer()[pri:0, instance:deepakjagtap.appium.eCommerce_TestCases@6a6cb05c]" started-at="2025-03-27T12:48:23 IST" name="tearDownServer" finished-at="2025-03-27T12:48:23 IST" duration-ms="8" status="PASS">
+        <test-method is-config="true" signature="tearDownServer()[pri:0, instance:deepakjagtap.appium.eCommerce_TestCases@2d1ef81a]" started-at="2025-03-27T16:29:49 IST" name="tearDownServer" finished-at="2025-03-27T16:29:50 IST" duration-ms="10" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownServer -->
