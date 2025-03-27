@@ -19,13 +19,12 @@ import org.testng.annotations.BeforeSuite;
 import com.google.common.collect.ImmutableBiMap;
 import com.google.common.collect.ImmutableMap;
 
-import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
 
-public class BaseTest {
+public class BrowserBaseTest {
 	AppiumDriverLocalService service;
 	AndroidDriver driver;
 
@@ -46,12 +45,11 @@ public class BaseTest {
 		UiAutomator2Options options = new UiAutomator2Options();
 		options.setDeviceName(Constants.DEVICE_NAME);
 		options.setChromedriverExecutable("C://Users//deepak.jagtap//Downloads//chromedriver-win64 (1)//chromedriver-win64//chromedriver.exe");
-		options.setApp(Constants.GENERAL_STORE_APP);
+		options.setCapability("browserName", "chrome");
 		driver = new AndroidDriver(new URI(Constants.SERVER_ADDRESS).toURL(), options);
 
 		if (driver == null) {
 			System.out.println("Driver initialization failed.");
-			Assert.fail("Driver initialization failed.");
 		}
 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -69,42 +67,4 @@ public class BaseTest {
 		System.out.println(Constants.SERVER_STOPPED);
 		System.out.println("******************************************");
 	}
-
-	public void longPressAction(WebElement ele) {
-		((JavascriptExecutor) driver).executeScript("mobile:longClickGesture",
-				ImmutableBiMap.of("elementId", ((RemoteWebElement) ele).getId(), "duration", 2000));
-	}
-
-	public void swipeLeftAction(WebElement ele) {
-		((JavascriptExecutor) driver).executeScript("mobile:swipeGesture",
-				ImmutableMap.of("elementId", ((RemoteWebElement) ele).getId(), "direction", "left", "percent", 0.75
-
-				));
-	}
-
-	public void scrollToEnd() {
-		boolean canScrollMore;
-		do {
-			canScrollMore = (Boolean) ((JavascriptExecutor) driver).executeScript("mobile:scrollGesture", ImmutableMap
-					.of("left", 100, "top", 100, "width", 200, "height", 200, "direction", "down", "percent", 3.0
-
-					));
-		} while (canScrollMore);
-	}
-
-	public void fillForm() {
-		driver.findElement(By.id("com.androidsample.generalstore:id/nameField")).sendKeys(Constants.USER_NAME);
-		driver.hideKeyboard();
-		driver.findElement(By.id("com.androidsample.generalstore:id/btnLetsShop")).click();
-	}
-//	 public void click(String loc) {
-//	        try {
-//	            WebElement element = driver.findElement(AppiumBy.accessibilityId(loc));
-//	            element.click();
-//	        } catch (Exception e) {
-//	            e.printStackTrace();
-//	            Assert.fail("Failed to click on element [" + loc + "]");
-//	        }
-//	    }
-
 }

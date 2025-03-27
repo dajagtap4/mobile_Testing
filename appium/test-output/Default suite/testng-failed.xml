@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="deepakjagtap.appium.eCommerce_TestCases">
+      <class name="deepakjagtap.appium.MobileBrowserTest">
         <methods>
-          <include name="driverInstance"/>
-          <include name="verifyUserCanAddMultipleItemsInCartAndCheckTotalOfAllCartItemsPriceAndMakeOrder_TC_005"/>
-          <include name="tearDown"/>
+          <include name="scrollAction"/>
           <include name="tearDownServer"/>
           <include name="ConfigureAppium"/>
+          <include name="tearDown"/>
+          <include name="driverInstance"/>
         </methods>
-      </class> <!-- deepakjagtap.appium.eCommerce_TestCases -->
+      </class> <!-- deepakjagtap.appium.MobileBrowserTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
