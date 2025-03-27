@@ -8,6 +8,7 @@ public class Constants {
 	public static final String ANDROID = "Android";
 	public static final String DEVICE_NAME = "Pixel 3a";
 	public static final String API_DEMOS_APK = "C://Users//deepak.jagtap//eclipse-workspace//appium//src//test//java//resources//ApiDemos-debug.apk";
+	public static final String GENERAL_STORE_APP = "C://Users//deepak.jagtap//eclipse-workspace//appium//src//test//java//resources//General-Store.apk";
 	public static final String SERVER_ADDRESS = "http://127.0.0.1:4723/";
 	public static final String EXPECTED_WIFI_SETTINGS = "WiFi settings";
 	public static final String EXPECTED_SAMPLE_MENU_TEXT = "Sample menu";
@@ -16,6 +17,8 @@ public class Constants {
 	
 	public static final String FOUSABLE_ATTRIBUTE = "focusable";
 
+	public static final String USER_NAME = "Deepak Jagtap";
+	
 	public static final String SERVER_STARTED = "Appium Server Started: ";
 	public static final String SERVER_STOPPED = ">>>>>>>>>>  server Stopped  <<<<<<<<<<";
 	public static final String DRIVER_CREATED = ">>>>>>>>>>  driver created  <<<<<<<<<<";

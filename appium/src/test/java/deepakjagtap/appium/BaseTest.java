@@ -37,7 +37,7 @@ public class BaseTest {
 		service.start();
 
 		System.out.println("******************************************");
-		System.out.println( Constants.SERVER_STARTED + service.isRunning());
+		System.out.println(Constants.SERVER_STARTED + service.isRunning());
 		System.out.println("******************************************");
 	}
 
@@ -45,7 +45,7 @@ public class BaseTest {
 	public void driverInstance() throws MalformedURLException, URISyntaxException {
 		UiAutomator2Options options = new UiAutomator2Options();
 		options.setDeviceName(Constants.DEVICE_NAME);
-		options.setApp(Constants.API_DEMOS_APK);
+		options.setApp(Constants.GENERAL_STORE_APP);
 		driver = new AndroidDriver(new URI(Constants.SERVER_ADDRESS).toURL(), options);
 
 		if (driver == null) {
@@ -73,12 +73,12 @@ public class BaseTest {
 		((JavascriptExecutor) driver).executeScript("mobile:longClickGesture",
 				ImmutableBiMap.of("elementId", ((RemoteWebElement) ele).getId(), "duration", 2000));
 	}
-	
-	public void swipeLeftAction(WebElement ele) {
-		((JavascriptExecutor) driver).executeScript("mobile:swipeGesture", ImmutableMap.of("elementId",
-				((RemoteWebElement) ele).getId(), "direction", "left", "percent", 0.75
 
-		));
+	public void swipeLeftAction(WebElement ele) {
+		((JavascriptExecutor) driver).executeScript("mobile:swipeGesture",
+				ImmutableMap.of("elementId", ((RemoteWebElement) ele).getId(), "direction", "left", "percent", 0.75
+
+				));
 	}
 
 	public void scrollToEnd() {
@@ -91,6 +91,11 @@ public class BaseTest {
 		} while (canScrollMore);
 	}
 
+	public void fillForm() {
+		driver.findElement(By.id("com.androidsample.generalstore:id/nameField")).sendKeys(Constants.USER_NAME);
+		driver.hideKeyboard();
+		driver.findElement(By.id("com.androidsample.generalstore:id/btnLetsShop")).click();
+	}
 //	 public void click(String loc) {
 //	        try {
 //	            WebElement element = driver.findElement(AppiumBy.accessibilityId(loc));
