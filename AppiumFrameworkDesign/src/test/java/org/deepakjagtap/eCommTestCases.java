@@ -17,19 +17,24 @@ public class eCommTestCases extends BaseTest {
 	@Test
 	public void verifyUserCanAddMultipleItemsInCartAndCheckTotalOfAllCartItemsPriceAndMakeOrder()
 			throws InterruptedException {
-
+		
+		// filling form
 		formPage.setNameField("Deepak jagtap");
 		formPage.setGender("female");
 		formPage.setCountrySelection("Argentina");
-
 		ProductCatalogue productCatalogue = formPage.submitForm();
+		
+		// navigated to product catalogue list page
 		productCatalogue.addItemsToCartByIndex(0);
 		productCatalogue.addItemsToCartByIndex(0);
 		CartPage cartPage = productCatalogue.goToCartPage();
+		
+		// navigated to cart page 
+		// Adding and asserting prices
 		double totalSum = cartPage.getProductSum();
 		double displayedFormattedSum = cartPage.getTotalAmountDisplayed();
-
 		Assert.assertEquals(totalSum, displayedFormattedSum);
+		
 		cartPage.acceptTermsConditions();
 		cartPage.submitOrder();
 	}
