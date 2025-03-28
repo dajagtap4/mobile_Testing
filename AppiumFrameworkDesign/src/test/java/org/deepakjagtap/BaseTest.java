@@ -41,6 +41,7 @@ public class BaseTest {
 		System.out.println("******************************************");
 		System.out.println("Appium Server Started:" + service.isRunning());
 		System.out.println("******************************************");
+
 	}
 
 	@BeforeMethod
@@ -61,6 +62,11 @@ public class BaseTest {
 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	}
+//	@BeforeMethod
+//	public void navigateToStartingPage() throws MalformedURLException, URISyntaxException {
+//		((JavascriptExecutor) driver).executeScript("mobile:startActivity", ImmutableMap.of("intent",
+//				"com.androidsample.generalstore/com.androidsample.generalstore.MainActivity"));
+//	}
 
 	@AfterMethod
 	public void tearDown() {

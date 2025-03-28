@@ -9,7 +9,7 @@
           <include name="driverInstance"/>
           <include name="tearDown"/>
           <include name="tearDownServer"/>
-          <include name="verifyUserCanAddMultipleItemsInCartAndCheckTotalOfAllCartItemsPriceAndMakeOrder"/>
+          <include name="verifyUserCanAddMultipleItemsInCartAndCheckTotalOfAllCartItemsPriceAndMakeOrder" invocation-numbers="0"/>
         </methods>
       </class> <!-- org.deepakjagtap.eCommTestCases -->
     </classes>

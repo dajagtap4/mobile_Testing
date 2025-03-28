@@ -42,7 +42,8 @@ public class FormPage extends AndroidActions {
 		if (gender.contains("female")) {
 			femaleOption.click();
 		} else {
-			maleOption.click();
+			//maleOption.click();
+			System.out.println("by def male selected");
 		}
 	}
 
