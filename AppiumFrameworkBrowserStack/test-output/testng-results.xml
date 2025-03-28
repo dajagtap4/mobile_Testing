@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-03-29T00:58:40 IST" name="Suite" finished-at="2025-03-29T00:59:30 IST" duration-ms="49759">
+    <groups>
+    </groups>
+    <test started-at="2025-03-29T00:58:40 IST" name="Test-2" finished-at="2025-03-29T00:59:22 IST" duration-ms="41933">
+      <class name="org.deepakjagtap.TC_003_addToCart">
+        <test-method is-config="true" signature="ConfigureAppium()[pri:0, instance:org.deepakjagtap.TC_003_addToCart@a52ca2e]" started-at="2025-03-29T00:58:33 IST" name="ConfigureAppium" finished-at="2025-03-29T00:58:40 IST" duration-ms="7677" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ConfigureAppium -->
+        <test-method is-config="true" signature="driverInstance()[pri:0, instance:org.deepakjagtap.TC_003_addToCart@a52ca2e]" started-at="2025-03-29T00:58:41 IST" name="driverInstance" finished-at="2025-03-29T00:59:01 IST" duration-ms="20526" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverInstance -->
+        <test-method signature="verifyUserCanAddProductInCart_TC_003()[pri:0, instance:org.deepakjagtap.TC_003_addToCart@a52ca2e]" started-at="2025-03-29T00:59:01 IST" name="verifyUserCanAddProductInCart_TC_003" finished-at="2025-03-29T00:59:20 IST" duration-ms="18823" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserCanAddProductInCart_TC_003 -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.deepakjagtap.TC_003_addToCart@a52ca2e]" started-at="2025-03-29T00:59:20 IST" name="tearDown" finished-at="2025-03-29T00:59:22 IST" duration-ms="2200" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="tearDownServer()[pri:0, instance:org.deepakjagtap.TC_003_addToCart@a52ca2e]" started-at="2025-03-29T00:59:30 IST" name="tearDownServer" finished-at="2025-03-29T00:59:30 IST" duration-ms="52" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownServer -->
+      </class> <!-- org.deepakjagtap.TC_003_addToCart -->
+    </test> <!-- Test-2 -->
+    <test started-at="2025-03-29T00:58:40 IST" name="Test-1" finished-at="2025-03-29T00:59:26 IST" duration-ms="45520">
+      <class name="org.deepakjagtap.TC_003_addToCart">
+        <test-method is-config="true" signature="driverInstance()[pri:0, instance:org.deepakjagtap.TC_003_addToCart@76c52298]" started-at="2025-03-29T00:58:40 IST" name="driverInstance" finished-at="2025-03-29T00:59:00 IST" duration-ms="19877" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverInstance -->
+        <test-method signature="verifyUserCanAddProductInCart_TC_003()[pri:0, instance:org.deepakjagtap.TC_003_addToCart@76c52298]" started-at="2025-03-29T00:59:00 IST" name="verifyUserCanAddProductInCart_TC_003" finished-at="2025-03-29T00:59:24 IST" duration-ms="23189" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserCanAddProductInCart_TC_003 -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.deepakjagtap.TC_003_addToCart@76c52298]" started-at="2025-03-29T00:59:24 IST" name="tearDown" finished-at="2025-03-29T00:59:26 IST" duration-ms="2240" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- org.deepakjagtap.TC_003_addToCart -->
+    </test> <!-- Test-1 -->
+    <test started-at="2025-03-29T00:58:40 IST" name="Test-0" finished-at="2025-03-29T00:59:30 IST" duration-ms="49759">
+      <class name="org.deepakjagtap.TC_003_addToCart">
+        <test-method is-config="true" signature="driverInstance()[pri:0, instance:org.deepakjagtap.TC_003_addToCart@2116b68b]" started-at="2025-03-29T00:58:40 IST" name="driverInstance" finished-at="2025-03-29T00:59:00 IST" duration-ms="19648" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverInstance -->
+        <test-method signature="verifyUserCanAddProductInCart_TC_003()[pri:0, instance:org.deepakjagtap.TC_003_addToCart@2116b68b]" started-at="2025-03-29T00:59:00 IST" name="verifyUserCanAddProductInCart_TC_003" finished-at="2025-03-29T00:59:27 IST" duration-ms="27137" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserCanAddProductInCart_TC_003 -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.deepakjagtap.TC_003_addToCart@2116b68b]" started-at="2025-03-29T00:59:27 IST" name="tearDown" finished-at="2025-03-29T00:59:30 IST" duration-ms="2639" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- org.deepakjagtap.TC_003_addToCart -->
+    </test> <!-- Test-0 -->
+  </suite> <!-- Suite -->
+</testng-results>

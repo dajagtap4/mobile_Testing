@@ -1,0 +1,53 @@
+00:28:59.177 [main] INFO  c.b.launchers.LaunchMavenCommand - Executing maven archetype command - browserstack-sdk-archetype-integrate
+00:28:59.192 [main] INFO  c.b.launchers.LaunchMavenCommand - The maven properties for launcher are [archetypeArtifactId=browserstack-sdk-archetype-integrate, BROWSERSTACK_ACCESS_KEY=Jsgfqyt7Znz4zyP5htLZ, groupId=com.browserstack, BROWSERSTACK_APP=bs://sample.app, BROWSERSTACK_FRAMEWORK=java, version=1.0, PROJECT_NAME=BrowserStack Sample, archetypeVersion=1.5, archetypeGroupId=com.browserstack, artifactId=java-archetype-integrate, BROWSERSTACK_USERNAME=jagtapda_MAQ3XB, BUILD_NAME=browserstack build, BROWSERSTACK_SOURCE=java:appium-eclipse:v1.0.10]
+00:32:39.588 [main] INFO  c.b.a.BrowserStackPropertyTester - Testing : isBrowserStackEnabled
+00:32:39.589 [main] INFO  c.b.BrowserStackPluginActivator - Prefs Keys []
+00:32:39.593 [main] INFO  c.b.a.BrowserStackPropertyTester - Validation Result isBrowserStackEnabled : true P/AppiumFrameworkBrowserStack
+00:32:39.596 [main] INFO  c.b.a.BrowserStackPropertyTester - Testing : isBrowserStackDisabled
+00:32:39.596 [main] INFO  c.b.BrowserStackPluginActivator - Prefs Keys []
+00:32:39.600 [main] INFO  c.b.a.BrowserStackPropertyTester - Validation Result isBrowserStackDisabled : false P/AppiumFrameworkBrowserStack
+00:32:50.077 [main] INFO  c.b.a.BrowserStackPropertyTester - Testing : isBrowserStackEnabled
+00:32:50.077 [main] INFO  c.b.BrowserStackPluginActivator - Prefs Keys []
+00:32:50.080 [main] INFO  c.b.a.BrowserStackPropertyTester - Validation Result isBrowserStackEnabled : true P/AppiumFrameworkBrowserStack
+00:32:50.082 [main] INFO  c.b.a.BrowserStackPropertyTester - Testing : isBrowserStackDisabled
+00:32:50.082 [main] INFO  c.b.BrowserStackPluginActivator - Prefs Keys []
+00:32:50.086 [main] INFO  c.b.a.BrowserStackPropertyTester - Validation Result isBrowserStackDisabled : false P/AppiumFrameworkBrowserStack
+00:40:05.930 [main] INFO  c.b.a.BrowserStackPropertyTester - Testing : isBrowserStackEnabled
+00:40:05.930 [main] INFO  c.b.BrowserStackPluginActivator - Prefs Keys []
+00:40:05.933 [main] INFO  c.b.a.BrowserStackPropertyTester - Validation Result isBrowserStackEnabled : true P/AppiumFrameworkBrowserStack
+00:40:05.934 [main] INFO  c.b.a.BrowserStackPropertyTester - Testing : isBrowserStackDisabled
+00:40:05.934 [main] INFO  c.b.BrowserStackPluginActivator - Prefs Keys []
+00:40:05.937 [main] INFO  c.b.a.BrowserStackPropertyTester - Validation Result isBrowserStackDisabled : false P/AppiumFrameworkBrowserStack
+00:40:07.650 [main] INFO  c.b.a.BrowserStackPropertyTester - Testing : isBrowserStackEnabled
+00:40:07.650 [main] INFO  c.b.BrowserStackPluginActivator - Prefs Keys []
+00:40:07.654 [main] INFO  c.b.a.BrowserStackPropertyTester - Validation Result isBrowserStackEnabled : true P/AppiumFrameworkBrowserStack
+00:40:07.656 [main] INFO  c.b.a.BrowserStackPropertyTester - Testing : isBrowserStackDisabled
+00:40:07.656 [main] INFO  c.b.BrowserStackPluginActivator - Prefs Keys []
+00:40:07.660 [main] INFO  c.b.a.BrowserStackPropertyTester - Validation Result isBrowserStackDisabled : false P/AppiumFrameworkBrowserStack
+00:40:36.348 [Worker-9: Launching AppiumFrameworkBrowserStack_testng.xml] INFO  c.b.BrowserStackPluginActivator - The previous launch removed.
+00:40:36.352 [Worker-9: Launching AppiumFrameworkBrowserStack_testng.xml] INFO  c.b.BrowserStackPluginActivator - Existing javaagentArgline (BROWSERSTACK_JAVAAGENT_ARGLINE) in plugin prefs is 
+00:40:36.357 [Worker-9: Launching AppiumFrameworkBrowserStack_testng.xml] INFO  c.b.BrowserStackPluginActivator - Prefs Keys []
+00:40:36.359 [Worker-9: Launching AppiumFrameworkBrowserStack_testng.xml] INFO  c.b.BrowserStackPluginActivator - The environment variables for the launch configuration are {BROWSERSTACK_EXEC_SOURCE=eclipse/1.0.10}
+00:46:18.137 [Worker-9: Launching eCommTestCases.verifyUserCanAddMultipleItemsInCartAndCheckTotalOfAllCartItemsPriceAndMakeOrder] INFO  c.b.BrowserStackPluginActivator - The previous launch removed.
+00:46:18.143 [Worker-9: Launching eCommTestCases.verifyUserCanAddMultipleItemsInCartAndCheckTotalOfAllCartItemsPriceAndMakeOrder] INFO  c.b.BrowserStackPluginActivator - The environment variables for the launch configuration are {}
+00:48:38.347 [main] INFO  c.b.a.BrowserStackPropertyTester - Testing : isBrowserStackEnabled
+00:48:38.348 [main] INFO  c.b.BrowserStackPluginActivator - Prefs Keys []
+00:48:38.353 [main] INFO  c.b.a.BrowserStackPropertyTester - Validation Result isBrowserStackEnabled : true P/AppiumFrameworkBrowserStack
+00:48:38.356 [main] INFO  c.b.a.BrowserStackPropertyTester - Testing : isBrowserStackDisabled
+00:48:38.357 [main] INFO  c.b.BrowserStackPluginActivator - Prefs Keys []
+00:48:38.363 [main] INFO  c.b.a.BrowserStackPropertyTester - Validation Result isBrowserStackDisabled : false P/AppiumFrameworkBrowserStack
+00:51:46.389 [Worker-49: Launching TC_003_addToCart.verifyUserCanAddProductInCart_TC_003] INFO  c.b.BrowserStackPluginActivator - The previous launch removed.
+00:51:46.395 [Worker-49: Launching TC_003_addToCart.verifyUserCanAddProductInCart_TC_003] INFO  c.b.BrowserStackPluginActivator - Existing javaagentArgline (BROWSERSTACK_JAVAAGENT_ARGLINE) in plugin prefs is 
+00:51:46.404 [Worker-49: Launching TC_003_addToCart.verifyUserCanAddProductInCart_TC_003] INFO  c.b.BrowserStackPluginActivator - Prefs Keys []
+00:51:46.407 [Worker-49: Launching TC_003_addToCart.verifyUserCanAddProductInCart_TC_003] INFO  c.b.BrowserStackPluginActivator - The environment variables for the launch configuration are {BROWSERSTACK_EXEC_SOURCE=eclipse/1.0.10}
+00:53:41.973 [Worker-49: Launching AppiumFrameworkBrowserStack_testng.xml] INFO  c.b.BrowserStackPluginActivator - The previous launch removed.
+00:53:41.977 [Worker-49: Launching AppiumFrameworkBrowserStack_testng.xml] INFO  c.b.BrowserStackPluginActivator - Existing javaagentArgline (BROWSERSTACK_JAVAAGENT_ARGLINE) in plugin prefs is 
+00:53:41.985 [Worker-49: Launching AppiumFrameworkBrowserStack_testng.xml] INFO  c.b.BrowserStackPluginActivator - Prefs Keys []
+00:53:41.988 [Worker-49: Launching AppiumFrameworkBrowserStack_testng.xml] INFO  c.b.BrowserStackPluginActivator - The environment variables for the launch configuration are {BROWSERSTACK_EXEC_SOURCE=eclipse/1.0.10}
+00:55:24.567 [Worker-50: Launching AppiumFrameworkBrowserStack_testng.xml] INFO  c.b.BrowserStackPluginActivator - The previous launch removed.
+00:55:24.570 [Worker-50: Launching AppiumFrameworkBrowserStack_testng.xml] INFO  c.b.BrowserStackPluginActivator - Existing javaagentArgline (BROWSERSTACK_JAVAAGENT_ARGLINE) in plugin prefs is 
+00:55:24.575 [Worker-50: Launching AppiumFrameworkBrowserStack_testng.xml] INFO  c.b.BrowserStackPluginActivator - Prefs Keys []
+00:55:24.578 [Worker-50: Launching AppiumFrameworkBrowserStack_testng.xml] INFO  c.b.BrowserStackPluginActivator - The environment variables for the launch configuration are {BROWSERSTACK_EXEC_SOURCE=eclipse/1.0.10}
+00:58:09.981 [Worker-51: Launching AppiumFrameworkBrowserStack_testng.xml] INFO  c.b.BrowserStackPluginActivator - Existing javaagentArgline (BROWSERSTACK_JAVAAGENT_ARGLINE) in plugin prefs is 
+00:58:10.026 [Worker-51: Launching AppiumFrameworkBrowserStack_testng.xml] INFO  c.b.BrowserStackPluginActivator - Prefs Keys []
+00:58:10.028 [Worker-51: Launching AppiumFrameworkBrowserStack_testng.xml] INFO  c.b.BrowserStackPluginActivator - The environment variables for the launch configuration are {BROWSERSTACK_EXEC_SOURCE=eclipse/1.0.10}
