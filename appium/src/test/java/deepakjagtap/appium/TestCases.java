@@ -18,7 +18,7 @@ import io.appium.java_client.android.nativekey.KeyEvent;
 
 public class TestCases extends BaseTest implements Locoators {
 
-	@Test(enabled = true)
+	@Test(groups = { "smoke" })
 	public void VerifyUserCanDoWifiSettingAndEnterInput() throws MalformedURLException, URISyntaxException {
 		driver.findElement(AppiumBy.accessibilityId(PREFERENCE)).click();
 		driver.findElement(AppiumBy.accessibilityId(PREFERENCE_DEPENDENCIES)).click();
@@ -39,7 +39,7 @@ public class TestCases extends BaseTest implements Locoators {
 		driver.findElement(By.id(OK)).click();
 	}
 
-	@Test
+	@Test(groups = { "smoke" })
 	public void directlyNavigateToDesiredPageWith_startActivity() {
 
 		((JavascriptExecutor) driver).executeScript("mobile:startActivity", ImmutableMap.of("intent",
@@ -85,7 +85,7 @@ public class TestCases extends BaseTest implements Locoators {
 		driver.pressKey(new KeyEvent(AndroidKey.HOME));
 	}
 
-	@Test(enabled = true)
+	@Test(groups = { "smoke" })
 	public void verify_LongPress_Gesture() throws InterruptedException {
 		driver.findElement(AppiumBy.accessibilityId(VIEWS)).click();
 		driver.findElement(AppiumBy.accessibilityId(EXPANDABLE_LISTS)).click();

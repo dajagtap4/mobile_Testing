@@ -31,6 +31,11 @@
 
 	<dependencies>
 		<dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>5.1.2</version>
+		</dependency>
+		<dependency>
 			<groupId>io.appium</groupId>
 			<artifactId>java-client</artifactId>
 			<version>9.4.0</version>
@@ -48,7 +53,57 @@
 			<artifactId>selenium-support</artifactId>
 			<version>4.30.0</version>
 		</dependency>
+
+		<!-- comment this dependancy for maven test excecution -->
+		<!--<dependency>
+			<groupId>org.deepakjagtap</groupId>
+			<artifactId>ExtentReports</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>-->
 	</dependencies>
+
+	<profiles>
+		<profile>
+			<id>smoke</id>
+			<build>
+				<pluginManagement>
+					<plugins>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-surefire-plugin</artifactId>
+							<version>3.5.2</version>
+							<configuration>
+								<suiteXmlFiles>
+									<suiteXmlFile>testng.xml</suiteXmlFile>
+								</suiteXmlFiles>
+							</configuration>
+						</plugin>
+					</plugins>
+				</pluginManagement>
+			</build>
+		</profile>
+
+		<profile>
+			<id>Regression</id>
+			<build>
+				<pluginManagement>
+					<plugins>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-surefire-plugin</artifactId>
+							<version>3.5.2</version>
+							<configuration>
+								<suiteXmlFiles>
+									<suiteXmlFile>testng2.xml</suiteXmlFile>
+								</suiteXmlFiles>
+							</configuration>
+						</plugin>
+					</plugins>
+				</pluginManagement>
+			</build>
+		</profile>
+	</profiles>
+
 
 	<build>
 		<pluginManagement><!-- lock down plugins versions to avoid using Maven

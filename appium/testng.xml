@@ -1,13 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="Appium Suite">
-    <test name="Smoke Tests">
-        <groups>
-            <run>
-                <include name="smoke"/>
-            </run>
-        </groups>
-        <classes>
-            <class name="deepakjagtap.appium.TestCases"/>
-        </classes>
-    </test>
-</suite>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+	<test thread-count="5" name="SwipeAction">
+		<classes>
+			<class name="deepakjagtap.appium.SwipeAction" />
+		</classes>
+	</test> <!--Test -->
+
+	<test thread-count="5" name="scrollAction">
+		<classes>
+			<class name="deepakjagtap.appium.scrollAction" />
+		</classes>
+	</test> <!--Test -->
+
+	<test thread-count="5" name="LongPress">
+		<classes>
+			<class name="deepakjagtap.appium.LongPress" />
+		</classes>
+	</test> <!--Test -->
+
+	<test thread-count="5" name="DragDropDemo">
+		<classes>
+			<class name="deepakjagtap.appium.DragDropDemo" />
+		</classes>
+	</test> <!--Test -->
+</suite> <!--
+Suite -->
+

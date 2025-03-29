@@ -51,3 +51,37 @@
 00:58:09.981 [Worker-51: Launching AppiumFrameworkBrowserStack_testng.xml] INFO  c.b.BrowserStackPluginActivator - Existing javaagentArgline (BROWSERSTACK_JAVAAGENT_ARGLINE) in plugin prefs is 
 00:58:10.026 [Worker-51: Launching AppiumFrameworkBrowserStack_testng.xml] INFO  c.b.BrowserStackPluginActivator - Prefs Keys []
 00:58:10.028 [Worker-51: Launching AppiumFrameworkBrowserStack_testng.xml] INFO  c.b.BrowserStackPluginActivator - The environment variables for the launch configuration are {BROWSERSTACK_EXEC_SOURCE=eclipse/1.0.10}
+15:10:32.651 [Worker-169: Launching mavenrun-5eaad66e-2227-4f60-84b3-96bd6873c5a4] INFO  c.b.BrowserStackPluginActivator - The previous launch removed.
+15:10:32.657 [Worker-169: Launching mavenrun-5eaad66e-2227-4f60-84b3-96bd6873c5a4] INFO  c.b.BrowserStackPluginActivator - The previous launch removed.
+15:13:19.285 [main] INFO  c.b.a.BrowserStackPropertyTester - Testing : isBrowserStackEnabled
+15:13:19.285 [main] INFO  c.b.BrowserStackPluginActivator - Prefs Keys []
+15:13:19.288 [main] INFO  c.b.a.BrowserStackPropertyTester - Validation Result isBrowserStackEnabled : true P/ExtentReports
+15:13:19.289 [main] INFO  c.b.a.BrowserStackPropertyTester - Testing : isBrowserStackDisabled
+15:13:19.289 [main] INFO  c.b.BrowserStackPluginActivator - Prefs Keys []
+15:13:19.292 [main] INFO  c.b.a.BrowserStackPropertyTester - Validation Result isBrowserStackDisabled : false P/ExtentReports
+15:13:22.805 [main] INFO  c.b.a.BrowserStackPropertyTester - Testing : isBrowserStackEnabled
+15:13:22.805 [main] INFO  c.b.BrowserStackPluginActivator - Prefs Keys []
+15:13:22.807 [main] INFO  c.b.a.BrowserStackPropertyTester - Validation Result isBrowserStackEnabled : true P/ExtentReports
+15:13:22.808 [main] INFO  c.b.a.BrowserStackPropertyTester - Testing : isBrowserStackDisabled
+15:13:22.808 [main] INFO  c.b.BrowserStackPluginActivator - Prefs Keys []
+15:13:22.811 [main] INFO  c.b.a.BrowserStackPropertyTester - Validation Result isBrowserStackDisabled : false P/ExtentReports
+15:22:43.561 [Worker-180: Launching ExtentReportsDemo.testDemoForExtentReports] INFO  c.b.BrowserStackPluginActivator - The previous launch removed.
+15:22:43.563 [Worker-180: Launching ExtentReportsDemo.testDemoForExtentReports] INFO  c.b.BrowserStackPluginActivator - The environment variables for the launch configuration are {}
+15:23:33.531 [main] INFO  c.b.a.BrowserStackPropertyTester - Testing : isBrowserStackEnabled
+15:23:33.531 [main] INFO  c.b.BrowserStackPluginActivator - Prefs Keys []
+15:23:33.535 [main] INFO  c.b.a.BrowserStackPropertyTester - Validation Result isBrowserStackEnabled : true P/ExtentReports
+15:23:33.538 [main] INFO  c.b.a.BrowserStackPropertyTester - Testing : isBrowserStackDisabled
+15:23:33.538 [main] INFO  c.b.BrowserStackPluginActivator - Prefs Keys []
+15:23:33.543 [main] INFO  c.b.a.BrowserStackPropertyTester - Validation Result isBrowserStackDisabled : false P/ExtentReports
+15:25:30.451 [Worker-175: Launching ExtentReportsDemo.testDemoForExtentReports] INFO  c.b.BrowserStackPluginActivator - The previous launch removed.
+15:25:30.453 [Worker-175: Launching ExtentReportsDemo.testDemoForExtentReports] INFO  c.b.BrowserStackPluginActivator - The environment variables for the launch configuration are {}
+15:25:43.466 [main] INFO  c.b.a.BrowserStackPropertyTester - Testing : isBrowserStackEnabled
+15:25:43.467 [main] INFO  c.b.BrowserStackPluginActivator - Prefs Keys []
+15:25:43.470 [main] INFO  c.b.a.BrowserStackPropertyTester - Validation Result isBrowserStackEnabled : true P/ExtentReports
+15:25:43.471 [main] INFO  c.b.a.BrowserStackPropertyTester - Testing : isBrowserStackDisabled
+15:25:43.471 [main] INFO  c.b.BrowserStackPluginActivator - Prefs Keys []
+15:25:43.475 [main] INFO  c.b.a.BrowserStackPropertyTester - Validation Result isBrowserStackDisabled : false P/ExtentReports
+15:28:26.831 [Worker-178: Launching ExtentReportsDemo.testDemoForExtentReports] INFO  c.b.BrowserStackPluginActivator - The previous launch removed.
+15:28:26.832 [Worker-178: Launching ExtentReportsDemo.testDemoForExtentReports] INFO  c.b.BrowserStackPluginActivator - The environment variables for the launch configuration are {}
+15:29:16.088 [Worker-179: Launching ExtentReportsDemo.testDemoForExtentReports] INFO  c.b.BrowserStackPluginActivator - The previous launch removed.
+15:29:16.089 [Worker-179: Launching ExtentReportsDemo.testDemoForExtentReports] INFO  c.b.BrowserStackPluginActivator - The environment variables for the launch configuration are {}

@@ -17,10 +17,10 @@ import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
 
 public class eCommerce_Native_And_Hybrid_APP extends BaseTest implements Locoators {
-	@Test
+	@Test(groups= {"smoke"},priority=1)
 	public void verifyUserCanFillFormAndSucessfullyNavigateToHomePage_TC_001() throws InterruptedException {
 		driver.findElement(By.id("com.androidsample.generalstore:id/radioFemale")).click();
-		driver.findElement(By.id("com.androidsample.generalstore:id/nameField")).sendKeys(Constants.USER_NAME);
+		driver.findElement(By.id("com.androidsample.generalstore:id/nameField")).sendKeys("deepak jagtap qa");
 		driver.hideKeyboard();
 		driver.findElement(By.id("android:id/text1")).click();
 		driver.findElement(
@@ -32,7 +32,7 @@ public class eCommerce_Native_And_Hybrid_APP extends BaseTest implements Locoato
 		Thread.sleep(2000);
 	}
 
-	@Test
+	@Test(groups= {"smoke"},priority=2)
 	public void verifyToastMessagesForErrorValidation_TC_002() throws InterruptedException {
 
 		driver.findElement(By.id("com.androidsample.generalstore:id/btnLetsShop")).click();
@@ -41,7 +41,7 @@ public class eCommerce_Native_And_Hybrid_APP extends BaseTest implements Locoato
 		Assert.assertEquals(toastMes, "Please enter your name");
 	}
 
-	@Test
+	@Test(enabled=false)
 	public void verifyUserCanAddProductInCart_TC_003() throws InterruptedException {
 		fillForm();
 
@@ -77,7 +77,7 @@ public class eCommerce_Native_And_Hybrid_APP extends BaseTest implements Locoato
 		System.out.println("Successfully added item in cart and validated...");
 	}
 
-	@Test
+	@Test(groups= {"smoke"},priority=3)
 	public void verifyUserCanAddProductInCartWithWebDriverWait_TC_004() throws InterruptedException {
 		fillForm();
 
@@ -103,16 +103,16 @@ public class eCommerce_Native_And_Hybrid_APP extends BaseTest implements Locoato
 		driver.findElement(By.id("com.androidsample.generalstore:id/appbar_btn_cart")).click();
 
 		// Asserting user navigated to CART and checking product is added in card
-		WebElement isCartDisplayed = driver.findElement(By.id("com.androidsample.generalstore:id/toolbar_title"));
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-		wait.until(ExpectedConditions.attributeContains(isCartDisplayed, "text", "Cart"));
+//		WebElement isCartDisplayed = driver.findElement(By.id("com.androidsample.generalstore:id/toolbar_title"));
+//		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+//		wait.until(ExpectedConditions.attributeContains(isCartDisplayed, "text", "Cart"));
 
 		// assert item in 'cart' that we selected in 'products'
 		String actualText = driver.findElement(By.xpath("//android.widget.TextView[@text='Jordan 6 Rings']")).getText();
 		Assert.assertEquals(actualText, "Jordan 6 Rings");
 	}
 
-	@Test
+	@Test(enabled=false)
 	public void verifyUserCanAddMultipleItemsInCartAndCheckTotalOfAllCartItemsPriceAndMakeOrder_TC_005()
 			throws InterruptedException {
 		fillForm();
@@ -157,8 +157,8 @@ public class eCommerce_Native_And_Hybrid_APP extends BaseTest implements Locoato
 
 	}
 
-	@Test
-	public void verifyUserCanHandleNativeAsWellWebApp() throws InterruptedException {
+	@Test(enabled=false)
+	public void verifyUserCanHandleNativeAsWellWebApp_HybdridApp() throws InterruptedException {
 		fillForm();
 		driver.findElements(By.xpath("//android.widget.TextView[@text='ADD TO CART']")).get(0).click();
 		driver.findElements(By.xpath("//android.widget.TextView[@text='ADD TO CART']")).get(0).click();

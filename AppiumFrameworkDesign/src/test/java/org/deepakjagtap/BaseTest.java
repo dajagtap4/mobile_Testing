@@ -30,7 +30,7 @@ public class BaseTest {
 	FormPage formPage;
 
 	@BeforeSuite
-	public void ConfigureAppium() throws MalformedURLException, URISyntaxException {
+	public void ConfigureAppium() throws MalformedURLException, URISyntaxException, InterruptedException {
 		service = new AppiumServiceBuilder()
 				.withAppiumJS(new File(
 						"C://Users//Administrator//AppData//Roaming//npm//node_modules//appium//build//lib//main.js"))
@@ -41,7 +41,13 @@ public class BaseTest {
 		System.out.println("******************************************");
 		System.out.println("Appium Server Started:" + service.isRunning());
 		System.out.println("******************************************");
-
+		
+		int retryCount = 0;
+		while (!service.isRunning() && retryCount < 10) {
+			System.out.println("Waiting for Appium server to start...");
+			Thread.sleep(1000);
+			retryCount++;
+		}
 	}
 
 	@BeforeMethod
