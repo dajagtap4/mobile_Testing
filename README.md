@@ -118,7 +118,7 @@ Add Below capabilities for `General-Store.apk` app, `Pixel 3a` device in JSON Re
 
 ```
 
-# Test Excecution using maven commands
+> # Test Excecution using maven commands
 
 Create `testng.xml` file in your selenium project 
 
@@ -204,7 +204,7 @@ here, we added `testng.xml` as `<suiteXmlFile>testng.xml</suiteXmlFile>` and giv
  
 ---
 ---
-# Jenkins Setup
+> # Jenkins Setup
 
 Click below link for Jenkins installation-
 https://www.jenkins.io/download/
@@ -224,7 +224,7 @@ C:\ProgramData\Jenkins\.jenkins\secrets\initialAdminPassword
 6. Select "Install Suggested plugins"
 * Getting Started.
 
-## Execution  on jenkins 
+ ## Execution  on jenkins 
 
 New Item > enter item name > freestyle project >ok
 
@@ -245,5 +245,76 @@ add command in `Build Steps` without mvn
 test -Psmoke
 ```
 save
+
+---
+
+---
+
+
+> # Cloud Testing | BrowserStack
+
+Create account on browserStack
+
+Do some setup in Eclipse for browserStack
+
+1. help > eclipse marketplace > browserstack > install.
+2. Right click on project > browserstack > Integrate with app automate sdk > Enter `user name` and `access key ` > integrate 
+
+`user name` and `access key ` will get in browserstack 
+
+BUILD SUCCESS get in terminal 
+
+.yaml file will created.
+
+
+3. Need to upload our app in BS (BrowserStack)
+4. in BS, upload app > upload it > `bs://b1a64584c8132cacf45c8b8576676db4eab5ab5e`
+we will get above key 
+5. open our project > open yaml file ( refresh project if not availabel) > paste like below 
+
+`app: bs://b1a64584c8132cacf45c8b8576676db4eab5ab5e # BrowserStack Sample App`  at line 32 in yaml file.
+
+now we can run our test in two ways 
+
+### Method 1 -
+
+Directly run from test case level li ke below 
+
+```
+public class TestCase extends BaseTest {
+	@Test
+    run |debuge
+	public void verifyUserCanFillForm() {
+		formPage.setNameField("Deepak QA");
+		formPage.setGender("female");
+		formPage.setCountrySelection("Antarctica");
+
+		ProductCatalogue productCatalogue = formPage.submitForm();
+		String actualProductTitle = productCatalogue.getProductTitle();
+		Assert.assertEquals(actualProductTitle, "Products");
+	}
+}
+```
+click on run -> 
+`run | debuge `
+
+test will execute on BS
+
+OR 
+
+right click -> testcases.java -> run as -> testNG test 
+
+test will execute on BS
+
+### Method 2 -
+
+refer "Test Excecution using maven commands"
+
+[Test Excecution using maven commands](https://github.com/dajagtap4/mobile_Testing)
+
+in 
+README.md file search "Test Excecution using maven commands"
+
+Done with BS
 
 ---
