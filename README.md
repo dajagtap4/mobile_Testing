@@ -308,11 +308,9 @@ test will execute on BS
 
 ### Method 2 -
 
-refer "Test Excecution using maven commands"
+Refer "Test Excecution using maven commands"
 
-[Test Excecution using maven commands](https://github.com/dajagtap4/mobile_Testing)
-
-in 
+in this
 README.md file search "Test Excecution using maven commands"
 
 Done with BS
