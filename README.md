@@ -323,3 +323,31 @@ README.md file search "Test Excecution using maven commands"
 Done with BS
 
 ---
+
+
+---
+---
+---
+
+> ## Directly navigate to Disired page with Activity()
+
+```
+@Test
+	public void directlyNavigateToDesiredPageWith_startActivity() {
+        
+		((JavascriptExecutor) driver).executeScript("mobile:startActivity", ImmutableMap.of("intent",
+				"io.appium.android.apis/io.appium.android.apis.app.ActionBarTabs"));
+
+	}
+```
+How to get this `"io.appium.android.apis/io.appium.android.apis.app.ActionBarTabs"`
+
+open android studio emulator where you want to go directly > go to cmd > enter below command
+
+`adb shell dumpsys window | grep -E 'mCurrentFocus'`
+
+try below if above not work
+
+`adb shell dumpsys window | findstr "mCurrentFocus"`
+
+---
