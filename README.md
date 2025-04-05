@@ -326,6 +326,166 @@ Done with BS
 
 ---
 
+> # Extents Reports and Listners
+add below dependancy in pom.xml file 
+```
+<dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>5.1.2</version>
+</dependency>
+```
+create class ExtentsReportsNG in "src/main/java/testutils/ExtentsReportsNG"
+
+`ExtentsReportsNG`
+```
+package testutils;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+
+public class ExtentsReportsNG {
+	static ExtentReports extent;
+	public static ExtentReports getReportObject() {
+		
+		String path = System.getProperty("user.dir") + "\\reports\\index.html";
+		ExtentSparkReporter reporter = new ExtentSparkReporter(path);
+		reporter.config().setReportName("this is report name");
+		reporter.config().setDocumentTitle("this is document title");
+
+		extent = new ExtentReports();
+		extent.attachReporter(reporter);
+		extent.setSystemInfo("tester", "deepak jagtap");
+		return extent;
+	}
+}
+```
+
+create Listners Interface in same package 
+
+`Listeners`
+```
+package testutils;
+
+import org.testng.ITestContext;
+import org.testng.ITestListener;
+import org.testng.ITestResult;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+
+public class Listeners implements ITestListener {
+	ExtentReports extent = ExtentsReportsNG.getReportObject();
+	ExtentTest test;
+
+	@Override
+	public void onTestStart(ITestResult result) {
+		test = extent.createTest(result.getMethod().getMethodName());
+	}
+
+	@Override
+	public void onTestSuccess(ITestResult result) {
+		test.log(Status.PASS, "Test pass");
+	}
+
+	@Override
+	public void onTestFailure(ITestResult result) {
+		System.out.println("Test Failed: " + result.getMethod().getMethodName());
+		System.out.println("Cause: " + result.getThrowable());
+	}
+
+	@Override
+	public void onTestSkipped(ITestResult result) {
+		System.out.println("Test Skipped: " + result.getMethod().getMethodName());
+	}
+
+	@Override
+	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
+		System.out.println("Test Failed but within success percentage: " + result.getMethod().getMethodName());
+	}
+
+	@Override
+	public void onFinish(ITestContext context) {
+		extent.flush();
+	}
+}
+
+```
+
+now we are ready with extents report setup and we are using Listners interface for 
+
+
+### 1. Centralized Reporting
+Instead of adding reporting logic to each test, you can centralize it in the listener. This keeps your tests clean and focused on test logic, while the listener handles reporting.
+
+### 2. Automated Actions on Test Events
+You can perform custom actions automatically when certain events occur:
+
+Before/After Test Execution: For setup and teardown operations.
+
+On Test Start/Finish: To log test metadata, take screenshots, or update reports.
+
+On Test Failure: To capture screenshots, log errors, or collect debug information.
+
+### 3. Reusable Across Test Classes
+Once implemented, the listener can be used across all tests without repeating code.
+
+### 4. Integration with Extent Reports (or any reporting tool)
+Listeners are perfect for integrating with tools like Extent Reports. They ensure that each test’s status is logged automatically without manually adding log statements in each test case.
+
+
+`Testng_listners.xml`
+add listners path in testng.xml <"profile"> in pom.xml so we c directly execute tests with `maven mvn test -Plistners`
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+	<listeners>
+		<listener class-name="org.deepakjagtap.utils.Listeners"></listener>
+	</listeners>
+
+	<test thread-count="5" name="Test">
+		<classes>
+			<class name="org.deepakjagtap.TestCase" />
+		</classes>
+	</test> <!--
+	Test -->
+</suite> <!--
+Suite -->
+```
+
+`pom.xml`
+
+```
+<profile>
+			<id>listners</id>
+			<build>
+				<pluginManagement>
+					<plugins>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-surefire-plugin</artifactId>
+							<version>3.5.2</version>
+							<configuration>
+								<suiteXmlFiles>
+									<suiteXmlFile>testng.listners.xml</suiteXmlFile>
+								</suiteXmlFiles>
+							</configuration>
+						</plugin>
+					</plugins>
+				</pluginManagement>
+			</build>
+		</profile>
+```
+
+maven command - `mvn test -Plistners`
+
+for maven execution refer "Test Excecution using maven commands" from this readme.md file.
+
+Done with extent reports and Listners.
 
 ---
 ---
