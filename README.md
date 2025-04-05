@@ -434,10 +434,11 @@ Once implemented, the listener can be used across all tests without repeating co
 ### 4. Integration with Extent Reports (or any reporting tool)
 Listeners are perfect for integrating with tools like Extent Reports. They ensure that each test’s status is logged automatically without manually adding log statements in each test case.
 
+---
 
-`Testng_listners.xml`
 add listners path in testng.xml <"profile"> in pom.xml so we c directly execute tests with `maven mvn test -Plistners`
 
+`Testng_listners.xml`
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
