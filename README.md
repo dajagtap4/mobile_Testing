@@ -327,6 +327,10 @@ Done with BS
 ---
 
 > # Extents Reports and Listners
+
+> To generate extents reports we need to execute test only through testng.xml files we can do it in eclipse or maven command.
+> We need Listners added in that testng.xml file
+
 add below dependancy in pom.xml file 
 ```
 <dependency>
