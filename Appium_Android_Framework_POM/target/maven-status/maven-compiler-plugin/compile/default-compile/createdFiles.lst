@@ -1,0 +1,4 @@
+org\deepakjagtap\pages\CartPage.class
+org\deepakjagtap\utils\AndroidActions.class
+org\deepakjagtap\pages\FormPage.class
+org\deepakjagtap\pages\ProductCatalogue.class
