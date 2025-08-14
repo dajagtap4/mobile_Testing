@@ -49,3 +49,11 @@ UiAutomator2Options options = new UiAutomator2Options();
 ```
 It is a class used to define desired capabilities for the UiAutomator2 driver, UiAutomator2 is Appium’s default automation engine for Android.
 ```
+
+### Install apk app in Emulator
+
+```
+C:\Users\deepak.jagtap\AppData\Local\Android\Sdk\platform-tools>adb install C:\Users\deepak.jagtap\Downloads\paytm-bhim-upi-money-transfer-mobile-recharge.apk
+Performing Streamed Install
+Success
+```
