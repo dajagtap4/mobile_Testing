@@ -1,3 +1,6 @@
+Also Refer This Notes - > https://docs.google.com/document/d/15f2u89FkVR3a1Gg4fOkTPIHNsYMBGRj5DbeaFKOTlVE/edit?tab=t.0
+
+
 `Appium_Android_Framework_POM.zip`
 
 Above project contains mobile testing with  
